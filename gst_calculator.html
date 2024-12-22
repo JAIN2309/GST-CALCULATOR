@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Calculator</title>
+    <link rel="stylesheet" href="gst_calculator.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="history-container">
+            <!-- History button -->
+            <button id="history-button" onclick="toggleHistory()">🕒 History</button>
+
+            <!-- History section -->
+            <div id="history-section" style="display: none;">
+                <h3>Calculation History</h3>
+                <ul id="history-list"></ul>
+            </div>
+        </div>
+
+       
+
+        <!-- Display section for breakdown -->
+        <div id="breakdown-section">
+            <div><span>Original Amount:</span> <span id="original-amount">0.00</span></div>
+            <div><span>GST Amount:</span> <span id="gst-amount">0.00</span></div>
+            <div><span>CGST:</span> <span id="cgst-amount">0.00</span></div>
+            <div><span>SGST:</span> <span id="sgst-amount">0.00</span></div>
+            <div><span>Total Amount:</span> <span id="total-amount">0.00</span></div>
+        </div>
+
+        <!-- Main display section -->
+        <div id="display-section">
+            <input type="text" id="display" readonly placeholder="0.00">
+        </div>
+
+        <!-- Top two buttons: Clear and Cut -->
+        <div class="top-buttons">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="deleteLast()">⌫</button> <!-- Cut button -->
+        </div>
+
+        <!-- Calculator buttons -->
+        <div class="buttons">
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button onclick="setOperator('/')">÷</button>
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button onclick="setOperator('*')">×</button>
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button onclick="setOperator('-')">−</button>
+            <button onclick="appendNumber('0')">0</button>
+            <button onclick="appendNumber('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="setOperator('+')">+</button>
+        </div>
+
+        <!-- GST buttons -->
+        <div class="gst-buttons">
+            <button onclick="addGST(5)">+5% GST</button>
+            <button onclick="addGST(12)">+12% GST</button>
+            <button onclick="addGST(18)">+18% GST</button>
+            <button onclick="addGST(28)">+28% GST</button>
+        </div>
+    </div>
+    <script src="gst_calculator.js"></script>
+</body>
+</html>

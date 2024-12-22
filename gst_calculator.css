@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9ecef; /* Light background for the whole page */
+    padding: 20px;
+}
+
+.calculator {
+    max-width: 400px; /* Compact calculator look */
+    margin: auto;
+    padding: 20px;
+    background: #ffffff; /* White background for calculator */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.history-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+#history-button {
+    margin-right: 10px; /* Reduced margin for a tighter look */
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+    transition: background-color 0.3s;
+}
+
+#history-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+#history-section {
+    flex: 1; /* Allows the history section to expand */
+    max-height: 300px; /* Set a max height for the history display */
+    overflow-y: auto; /* Add scrolling if necessary */
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light gray for history */
+    border-radius: 5px;
+}
+
+#history-section ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+#history-section li {
+    background-color: #d1e7dd; /* Light green for history items */
+    margin: 5px 0; /* Space between history items */
+    padding: 10px; /* Padding for each item */
+    border-radius: 5px; /* Rounded corners for items */
+}
+
+#previous-entry-section {
+    margin-bottom: 20px; /* Spacing for previous entry section */
+}
+
+#breakdown-section {
+    margin-bottom: 20px;
+}
+
+#display-section {
+    margin-bottom: 20px;
+}
+
+#display {
+    width: 100%; /* Full width for the display */
+    padding: 15px;
+    font-size: 24px; /* Larger font size for visibility */
+    text-align: right; /* Align text to the right */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #dcdcdc; /* Light gray background for display */
+    color: #000; /* Black text color */
+}
+
+#breakdown-section div {
+    margin-bottom: 5px; /* Space between breakdown items */
+}
+
+.top-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for top buttons */
+    gap: 10px; /* Spacing between buttons */
+    margin-bottom: 10px; /* Spacing below top buttons */
+}
+
+.buttons,
+.gst-buttons {
+    display: grid; /* Use grid layout for buttons */
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 10px; /* Spacing between buttons */
+    margin-bottom: 10px; /* Added margin for spacing between button groups */
+}
+
+button {
+    padding: 20px; /* Increased padding for better touch targets */
+    font-size: 20px; /* Larger font size for visibility */
+    cursor: pointer;
+    border: 2px solid #ccc; /* Borders for button appearance */
+    border-radius: 5px;
+    background-color: #ffcc00; /* Yellow background for buttons */
+    color: #333; /* Darker text color */
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #ffdb70; /* Lighter yellow on hover */
+}
+
+button:active {
+    transform: scale(0.95); /* Button press effect */
+}
+
+.gst-buttons button {
+    grid-column: span 2; /* Wider buttons for GST */
+}
+
+/* Additional styling for the breakdown section */
+#breakdown-section span {
+    font-weight: bold; /* Bold text for labels */
+    color: #007bff; /* Blue color for breakdown labels */
+}
